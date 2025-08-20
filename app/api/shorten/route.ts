@@ -12,9 +12,3 @@ export async function POST(request: Request) {
     { status: 201 }
   );
 }
-
-export async function GET () {
-  const ShortenerService = new UrlShortenerService();
-  const Urls = await ShortenerService.getUrlsList();
-  return NextResponse.json({Urls},{status:200})
-}

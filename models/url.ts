@@ -24,7 +24,6 @@ const urlSchema: Schema<IUrl> = new Schema(
   { timestamps: true }
 );
 
-// 3. Define the model and export it
-const Url = mongoose.model<IUrl>("Url", urlSchema);
+const Url = mongoose.models.Url || mongoose.model<IUrl>("Url", urlSchema);
 
 export default Url;
